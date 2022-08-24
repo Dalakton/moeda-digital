@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Moeda Digital</string>
+    <string name="title_coin">Moedas</string>
+    <string name="title_favorites">Favoritos</string>
+    <string name="title_delete">Delete</string>
+    <string name="digital_coin">MOEDA DIGITAL</string>
+    <string name="day_and_layer">19 AGO 2022</string>
+    <string name="back">VOLTAR</string>
+    <string name="adition">ADICIONAR</string>
+    <string name="volume_negociados">volumes negociados</string>
+    <string name="ultima_hora">última hora</string>
+    <string name="ultimo_dia">último dia</string>
+    <string name="ultimo_mes">último mês</string>
+    <string name="remover">Remover</string>
+    <string name="adicionar">Adicionar</string>
+</resources>

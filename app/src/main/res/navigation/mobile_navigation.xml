@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_coins">
+
+    <fragment
+        android:id="@+id/navigation_coins"
+        android:name="me.project.moedadigital.ui.Coin.CoinFragment"
+        android:label="@string/title_coin"
+        tools:layout="@layout/fragment_coin" >
+        <action
+            android:id="@+id/action_navigation_coins_to_navigation_favorites"
+            app:destination="@id/navigation_favorites" />
+        <action
+            android:id="@+id/action_navigation_coins_to_deleteFragment"
+            app:destination="@id/deleteFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_favorites"
+        android:name="me.project.moedadigital.ui.favorites.FavoriteFragment"
+        android:label="@string/title_favorites"
+        tools:layout="@layout/fragment_favorite" />
+    <fragment
+        android:id="@+id/deleteFragment"
+        android:name="me.project.moedadigital.ui.delete.DeleteFragment"
+        android:label="Delete" />
+
+</navigation>

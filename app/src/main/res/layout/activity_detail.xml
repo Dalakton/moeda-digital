@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".ui.detail.DetailActivity">
+
+    <ImageView
+        android:id="@+id/image_background"
+        android:layout_width="match_parent"
+        android:layout_height="340dp"
+        android:src="@color/green"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/image_back"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/ic_attach_default"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/back"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/image_back"
+        app:layout_constraintStart_toEndOf="@id/image_back"
+        app:layout_constraintTop_toTopOf="@id/image_back" />
+
+    <TextView
+        android:id="@+id/text_btc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="BTC" />
+
+    <ImageView
+        android:id="@+id/imagem_coin"
+        android:layout_width="88dp"
+        android:layout_height="88dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="@id/text_btc"
+        app:layout_constraintStart_toStartOf="@id/text_btc"
+        app:layout_constraintTop_toBottomOf="@id/text_btc"
+        app:srcCompat="@drawable/ic_monetization_on_fill0_wght400_grad0_opsz48" />
+
+    <TextView
+        android:id="@+id/text_valor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="8dp"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:drawableStartCompat="@drawable/ic_attach_usd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imagem_coin"
+        tools:text="21,368,589" />
+
+    <Button
+        android:id="@+id/button_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="60dp"
+        android:background="@color/transparente"
+        android:text="@string/adition"
+        app:layout_constraintEnd_toEndOf="@id/text_valor"
+        app:layout_constraintStart_toStartOf="@id/text_valor"
+        app:layout_constraintTop_toBottomOf="@id/text_valor" />
+
+    <TextView
+        android:id="@+id/text_volume"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="65dp"
+        android:text="@string/volume_negociados"
+        android:textColor="@color/white"
+        android:textSize="27sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_add" />
+
+    <TextView
+        android:id="@+id/text_ultima_hora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="26dp"
+        android:text="@string/ultima_hora"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_volume" />
+
+
+    <TextView
+        android:id="@+id/text_ultimo_dia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="26dp"
+        android:text="@string/ultimo_dia"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_ultima_hora" />
+
+    <TextView
+        android:id="@+id/text_ultimo_mes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="26dp"
+        android:text="@string/ultimo_mes"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_ultimo_dia" />
+
+    <TextView
+        android:id="@+id/text_valor_hora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        app:drawableStartCompat="@drawable/ic_attach_money_fill0_wght400_grad0_opsz48"
+        app:layout_constraintBottom_toBottomOf="@id/text_ultima_hora"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/text_ultima_hora"
+        tools:text="31,818.36" />
+
+    <TextView
+        android:id="@+id/text_valor_dia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        app:drawableStartCompat="@drawable/ic_attach_money_fill0_wght400_grad0_opsz48"
+        app:layout_constraintBottom_toBottomOf="@id/text_ultimo_dia"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/text_ultimo_dia"
+        tools:text="1,818.368" />
+
+    <TextView
+        android:id="@+id/text_valor_mes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        app:drawableStartCompat="@drawable/ic_attach_money_fill0_wght400_grad0_opsz48"
+        app:layout_constraintBottom_toBottomOf="@id/text_ultimo_mes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/text_ultimo_mes"
+        tools:text="1,818.368555555555555" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
