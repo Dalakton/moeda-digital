@@ -4,6 +4,7 @@ import android.app.Application
 import androidx.lifecycle.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import me.project.moedadigital.data.api.CoinWebService
 import me.project.moedadigital.data.localData.AppDataBase
 import me.project.moedadigital.data.localData.CoinEntity
 import me.project.moedadigital.data.repositories.CoinRepository
@@ -23,7 +24,8 @@ class CoinViewModel(application: Application) :
     init {
         getAllCoins()
         val coinDao = AppDataBase.getInstance(application).coinDao()
-        repository = CoinRepository(coinDao)
+        val coinWebService = CoinWebService.getInstance()
+        repository = CoinRepository(coinDao, coinWebService)
     }
 
     val addFavorite: LiveData<List<CoinEntity>> = repository.readAllData

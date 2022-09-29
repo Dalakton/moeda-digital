@@ -8,9 +8,7 @@ import me.project.moedadigital.data.localData.CoinDao
 import me.project.moedadigital.data.localData.CoinEntity
 import me.project.moedadigital.model.Coin
 
-class CoinRepository(private val coinDao: CoinDao) {
-
-    private val coinWebService = CoinWebService.getInstance()
+class CoinRepository(private val coinDao: CoinDao, private val coinWebService : CoinWebService ) {
 
 
     suspend fun getAllCoin(): List<Coin> {
