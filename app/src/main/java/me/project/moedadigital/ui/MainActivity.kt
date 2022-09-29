@@ -1,4 +1,4 @@
-package me.project.moedadigital.ui.view
+package me.project.moedadigital.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

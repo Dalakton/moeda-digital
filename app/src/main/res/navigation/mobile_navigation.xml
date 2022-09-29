@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/navigation_coins"
-        android:name="me.project.moedadigital.ui.Coin.CoinFragment"
+        android:name="me.project.moedadigital.ui.CoinFragment"
         android:label="@string/title_coin"
         tools:layout="@layout/fragment_coin" >
         <action
@@ -20,7 +20,7 @@
 
     <fragment
         android:id="@+id/navigation_favorites"
-        android:name="me.project.moedadigital.ui.favorites.FavoriteFragment"
+        android:name="me.project.moedadigital.ui.FavoriteFragment"
         android:label="@string/title_favorites"
         tools:layout="@layout/fragment_favorite" />
     <fragment

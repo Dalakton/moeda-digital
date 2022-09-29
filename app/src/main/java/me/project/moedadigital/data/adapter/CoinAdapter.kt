@@ -7,7 +7,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import me.project.moedadigital.databinding.ItemCoinBinding
 import me.project.moedadigital.model.Coin
-import me.project.moedadigital.ui.detail.DetailActivity
+import me.project.moedadigital.ui.DetailActivity
+import java.text.NumberFormat
 
 class CoinAdapter(private val coins: List<Coin>) :
     RecyclerView.Adapter<CoinAdapter.ViewHolder>() {
@@ -23,7 +24,7 @@ class CoinAdapter(private val coins: List<Coin>) :
         val coin = coins[position]
 
         holder.binding.textNomeMoeda.text = coin.nomeMoeda
-        holder.binding.textValor.text = coin.preco.toString()
+        holder.binding.textValor.text = NumberFormat.getInstance().format(coin.preco)
         holder.binding.textSiglaCoin.text = coin.moedaId
 
         holder.itemView.setOnClickListener {

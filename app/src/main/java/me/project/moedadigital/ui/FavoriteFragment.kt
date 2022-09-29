@@ -1,4 +1,4 @@
-package me.project.moedadigital.ui.favorites
+package me.project.moedadigital.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,13 +9,15 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import me.project.moedadigital.data.adapter.FavoriteAdapter
 import me.project.moedadigital.databinding.FragmentFavoriteBinding
+import me.project.moedadigital.viewModel.CoinViewModel
+import java.text.SimpleDateFormat
+import java.util.*
 
 class FavoriteFragment : Fragment() {
 
     private var _binding: FragmentFavoriteBinding? = null
 
-    private lateinit var fViewModel: FavoriteViewModel
-
+    private lateinit var viewModel: CoinViewModel
 
     private lateinit var favoriteAdapter: FavoriteAdapter
 
@@ -29,9 +31,10 @@ class FavoriteFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
 
-        fViewModel =
-            ViewModelProvider(this)[FavoriteViewModel::class.java]
-
+        viewModel =
+            ViewModelProvider(
+                this
+            )[CoinViewModel::class.java]
 
 
         _binding = FragmentFavoriteBinding.inflate(inflater, container, false)
@@ -40,9 +43,16 @@ class FavoriteFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        dateFormat()
         configurationRecycle()
-        observeListCoin()
-        
+        getFavoriteCoin()
+
+    }
+
+    private fun dateFormat() {
+        val date = Calendar.getInstance().time
+        val dateTime = SimpleDateFormat("d MMM yyyy", Locale.getDefault())
+        binding.textData.text = dateTime.format(date)
     }
 
     private fun configurationRecycle() {
@@ -51,8 +61,8 @@ class FavoriteFragment : Fragment() {
         favoriteAdapter = FavoriteAdapter()
     }
 
-    private fun observeListCoin() {
-        fViewModel.addFavorite.observe(viewLifecycleOwner) {
+    private fun getFavoriteCoin() {
+        viewModel.addFavorite.observe(viewLifecycleOwner) {
             favoriteAdapter.setData(it)
             binding.rvCoinFavorite.adapter = favoriteAdapter
         }

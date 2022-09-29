@@ -1,6 +1,6 @@
 package me.project.moedadigital.data.localData
 
-import android.content.Context
+import android.app.Application
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
@@ -14,7 +14,7 @@ abstract class AppDataBase : RoomDatabase() {
         @Volatile
         private var INSTANCE: AppDataBase? = null
 
-        fun getInstance(context: Context): AppDataBase {
+        fun getInstance(context: Application): AppDataBase {
             val tempInstance = INSTANCE
             if (tempInstance != null) {
                 return tempInstance

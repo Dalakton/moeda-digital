@@ -8,8 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import me.project.moedadigital.data.localData.CoinEntity
 import me.project.moedadigital.databinding.ItemCoinFavoriteBinding
-import me.project.moedadigital.ui.delete.DeleteActivity
-import me.project.moedadigital.ui.detail.DetailActivity
+import me.project.moedadigital.ui.DeleteActivity
 
 class FavoriteAdapter : RecyclerView.Adapter<FavoriteAdapter.MyViewHolder>() {
 
